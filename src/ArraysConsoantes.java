@@ -27,8 +27,6 @@ public class ArraysConsoantes {
                             if(!letra.equalsIgnoreCase("u")){
                                 consoantes[cont] = letra;
                                 qtdConsoantes++;
-                                
-                                System.out.println("Consoante:\t" + letra);
                             }
                         }
                     }
@@ -39,6 +37,14 @@ public class ArraysConsoantes {
         } while (cont < consoantes.length);
 
         System.out.println("Quantidade de Consoantes:\t" + qtdConsoantes);
+
+        //agora aqui utilizarei um for each que só imprimirá as consoantes
+        System.out.println("Consoantes:");
+        for (String consoante : consoantes) {
+            if(consoante != null){
+                System.out.println(consoante + " ");
+            }
+        }
     }
 
 
