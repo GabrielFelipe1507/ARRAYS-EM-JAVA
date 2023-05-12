@@ -12,39 +12,28 @@ public class ArraysConsoantes {
         Scanner leitura = new Scanner(System.in);
 
         String[] consoantes = new String[6];
-        int qtdConsoantes =0;
+        int qtdConsoantes = 0;
 
-        int cont = 0;
-
-        do {
+        for (int i = 0; i < 6; i++) {
             System.out.println("Digite as Letras:\t");
             String letra = leitura.next();
-        //com o equalsIgnoreCase eu consigo 
-            if(!letra.equalsIgnoreCase("a")){
-                if(! letra.equalsIgnoreCase("e")){
-                    if(!letra.equalsIgnoreCase("i")){
-                        if(!letra.equalsIgnoreCase("o")){
-                            if(!letra.equalsIgnoreCase("u")){
-                                consoantes[cont] = letra;
-                                qtdConsoantes++;
-                            }
-                        }
-                    }
-                 }
+            if (!letra.equalsIgnoreCase("a") && !letra.equalsIgnoreCase("e") && !letra.equalsIgnoreCase("i")
+                    && !letra.equalsIgnoreCase("o") && !letra.equalsIgnoreCase("u"))  {
+                consoantes[qtdConsoantes] = letra;
+                qtdConsoantes++;
             }
-            cont++;          
-
-        } while (cont < consoantes.length);
+        }
 
         System.out.println("Quantidade de Consoantes:\t" + qtdConsoantes);
 
         //agora aqui utilizarei um for each que só imprimirá as consoantes
         System.out.println("Consoantes:");
         for (String consoante : consoantes) {
-            if(consoante != null){
-                System.out.println(consoante + " ");
+            if (consoante != null) {
+                System.out.print(consoante + " ");
             }
         }
+
     }
 
 
